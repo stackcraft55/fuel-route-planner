@@ -85,6 +85,8 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = "static/"
+# OSM tile servers reject requests without a Referer
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
